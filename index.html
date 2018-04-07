@@ -23,7 +23,7 @@
         <a href="index.html" class="brand-logo">HEALTH COMMUNITY</a>
        <div class="right hide-on-med-and-down">
                <ul>
-<li><a href="test1.html">CHAT WITH THE BOT FOR HEALTH ASSISTANCE</a>
+<li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">CHAT WITH THE BOT FOR HEALTH ASSISTANCE</a>
 </ul>
 </div>
    </div>
@@ -31,7 +31,18 @@
   </div>
   
 <!--Added-->
-
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+        <div class="modal-content">
+                <iframe src="test1.html" width="400" height="1000">
+        
+                    </iframe>
+                
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close Chat</a>
+        </div>
+      </div>
 
 
   <div class="parallax-container">
@@ -50,21 +61,22 @@
   $(document).ready(function(){
       $('.carousel').carousel();
     });</script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-   $('.modal-trigger').leanModal();
-          
 
-  });
-         
-</script>
 <script type="text/javascript">
     $(document).ready(function(){
       $('.parallax').parallax();
     });
         
 </script>
+
+<script>
+$(document).ready(function(){
+    $('#modal1').openModal({
+        dismissible:false
+    });
+});
+</script>
+
         
          </body>
   </html>
