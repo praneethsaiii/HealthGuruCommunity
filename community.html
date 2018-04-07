@@ -9,9 +9,9 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <style tyepe="text/css">
-      .modal { width: 75% !important ; max-height: 100% !important ; overflow-y: hidden !important ;}  /* increase the width, height and prevent vertical scroll! However, i don't recommend this, its better to turn on vertical scrolling. */
-      </style>
+     <!-- <style tyepe="text/css">
+      .modal { width: 75% !important ; max-height: 70% !important ; overflow-y: hidden !important ;}  /* increase the width, height and prevent vertical scroll! However, i don't recommend this, its better to turn on vertical scrolling. */
+      </style>-->
     </head>
 
     <body>
@@ -38,7 +38,7 @@
 <div id="modal1" class="modal">
         <div class="modal-content">
           <p>
-                <iframe src="index.html" width="300" height="300">
+                <iframe src="index.html" width="400" height="800">
         
                     </iframe>                
           </p>
@@ -72,15 +72,19 @@
     });
         
 </script>
-
+<!--
 <script>
     $(document).ready(function(){
 	$('.modal-trigger').leanModal({
 		dismissible: false
 	});
 });
+</script>-->
+<script>
+  $(document).ready(function(){
+  $('.modal-trigger').leanModal();
+});
 </script>
-
         
          </body>
   </html>
