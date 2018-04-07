@@ -9,6 +9,9 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style tyepe="text/css">
+      .modal { width: 75% !important ; max-height: 100% !important ; overflow-y: hidden !important ;}  /* increase the width, height and prevent vertical scroll! However, i don't recommend this, its better to turn on vertical scrolling. */
+      </style>
     </head>
 
     <body>
@@ -34,13 +37,14 @@
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
         <div class="modal-content">
-                <iframe src="test1.html" width="400" height="1000">
+          <p>
+                <iframe src="test1.html" width="300" height="300">
         
-                    </iframe>
-                
+                    </iframe>                
+          </p>
         </div>
         <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close Chat</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
 
@@ -70,10 +74,10 @@
 </script>
 
 <script>
-$(document).ready(function(){
-    $('#modal1').openModal({
-        dismissible:false
-    });
+    $(document).ready(function(){
+	$('.modal-trigger').leanModal({
+		dismissible: false
+	});
 });
 </script>
 
