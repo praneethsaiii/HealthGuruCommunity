@@ -93,11 +93,15 @@
 			$name=$headache->name;
 			$desc=$headache->description;
 			$med=$headache->Medicines;
+			echo "<b>You have </b>";
 			echo $name;
 			echo "<br>";
+			echo "<br>";
+			echo "<b>About headache: </b>";
 			echo $desc;
 			echo "<br>";
 			echo "<br>";
+			echo "<b>Drug assistance </b>";
 			exit($med);
 		}
 		else if(strstr($q,"hospital") != false || strstr($q,"clinic") != false || strstr($q,"Hospital") != false)
