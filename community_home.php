@@ -15,6 +15,7 @@
     </head>
     <body>
     <?php
+    
     ?>
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -37,7 +38,8 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <textarea id="query" name="query" class="materialize-textarea"> </textarea><a class="waves-effect waves-light btn modal-trigger">Search</a>
+          <textarea id="query" name="query" class="materialize-textarea"> </textarea>
+          <a class="waves-effect waves-light btn modal-trigger">Search</a>
           <label for="query"><h5>Enter your query...!!</h5></label> 
         </div>
       </div>

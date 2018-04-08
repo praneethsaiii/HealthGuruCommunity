@@ -12,6 +12,7 @@
         "verify_peer_name"=>false,
     ),
 ); 
+
 		$i = 0;
         $q = $_REQUEST['q'];
 		if (strstr($q,"weather") != false) {
@@ -85,19 +86,22 @@
 			exit($plaintext);
 			}
 		}
-		else if(strstr($q,"headache") != false)
+		
+		else if(strstr($q,'diabetes') != false)
 		{
-			$path="http://localhost:3000/headache";
+			$path="http://localhost:3000/diabetes";
 			$headache1=file_get_contents($path);
 			$headache=json_decode($headache1);
 			$name=$headache->name;
 			$desc=$headache->description;
 			$med=$headache->Medicines;
-			echo "<b>You have </b>";
+			// echo "<b>You have </b>";
 			echo $name;
 			echo "<br>";
 			echo "<br>";
-			echo "<b>About headache: </b>";
+			echo "<b>About </b>";
+			echo $name;
+			echo ": ";
 			echo $desc;
 			echo "<br>";
 			echo "<br>";
