@@ -87,9 +87,18 @@
 		}
 		else if(strstr($q,"headache") != false)
 		{
-			$path="C:\wamp64\www\HealthGuru\diseases\headache.txt";
-			$headache=file_get_contents($path);
-			exit($headache);
+			$path="http://localhost:3000/headache";
+			$headache1=file_get_contents($path);
+			$headache=json_decode($headache1);
+			$name=$headache->name;
+			$desc=$headache->description;
+			$med=$headache->Medicines;
+			echo $name;
+			echo "<br>";
+			echo $desc;
+			echo "<br>";
+			echo "<br>";
+			exit($med);
 		}
 		else if(strstr($q,"hospital") != false || strstr($q,"clinic") != false || strstr($q,"Hospital") != false)
 		{
