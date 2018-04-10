@@ -108,6 +108,27 @@
 			echo "<b>Drug assistance </b>";
 			exit($med);
 		}
+		else if(strstr($q,'headache') != false)
+		{
+			$path="http://localhost:3000/headache";
+			$headache1=file_get_contents($path);
+			$headache=json_decode($headache1);
+			$name=$headache->name;
+			$desc=$headache->description;
+			$med=$headache->Medicines;
+			// echo "<b>You have </b>";
+			echo $name;
+			echo "<br>";
+			echo "<br>";
+			echo "<b>About </b>";
+			echo $name;
+			echo ": ";
+			echo $desc;
+			echo "<br>";
+			echo "<br>";
+			echo "<b>Drug assistance </b>";
+			exit($med);
+		}
 		else if(strstr($q,"hospital") != false || strstr($q,"clinic") != false || strstr($q,"Hospital") != false)
 		{
 			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9718,79.1589&radius=2000&type=hospital&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
@@ -142,7 +163,7 @@
 			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9718,79.1589&radius=2000&type=pharmacy&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
 			$resarray=json_decode($url);
 			$resultString="";
-			for($x=0;$x<10;$x++)
+			for($x=0;$x<5;$x++)
 			{
 			$results=$resarray->results[$x];
 			$name=$results->name;
