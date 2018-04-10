@@ -110,7 +110,7 @@
 		}
 		else if(strstr($q,"hospital") != false || strstr($q,"clinic") != false || strstr($q,"Hospital") != false)
 		{
-			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9701,80.2505&radius=2000&type=hospital&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
+			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9718,79.1589&radius=2000&type=hospital&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
 			$resarray=json_decode($url);
 			$resultString="";
 			for($x=0;$x<10;$x++)
@@ -139,7 +139,7 @@
 
 		else if(strstr($q,"pharmacy") != false || strstr($q,"medical") != false || strstr($q,"Medical") != false || strstr($q,"Pharmacy") != false)
 		{
-			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9701,80.2505&radius=2000&type=pharmacy&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
+			$url=file_get_contents('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.9718,79.1589&radius=2000&type=pharmacy&key=AIzaSyApUeIeH19vuu6VI-DVbxcU47IdX0Ny1hk',false,stream_context_create($arrContextOptions));
 			$resarray=json_decode($url);
 			$resultString="";
 			for($x=0;$x<10;$x++)
